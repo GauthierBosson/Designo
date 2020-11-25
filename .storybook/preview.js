@@ -1,5 +1,7 @@
 import * as React from "react";
+import { ThemeProvider } from "styled-components";
 
+import theme from "../src/theme.ts";
 import BaseStyle from "../src/layouts/base-style/BaseStyle";
 
 export const parameters = {
@@ -16,8 +18,10 @@ export const decorators = [
           rel="stylesheet"
         />
       </head>
-      <BaseStyle />
-      <Story />
+      <ThemeProvider theme={theme}>
+        <BaseStyle />
+        <Story />
+      </ThemeProvider>
     </>
   ),
 ];

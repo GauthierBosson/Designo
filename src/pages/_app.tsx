@@ -1,6 +1,9 @@
 import * as React from "react";
 import { AppProps } from "next/app";
 import Head from "next/head";
+import { ThemeProvider } from "styled-components";
+
+import theme from "../theme.js";
 import BaseStyle from "../layouts/base-style/BaseStyle";
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }: AppProps) => {
@@ -13,8 +16,10 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }: AppProps) => {
           rel="stylesheet"
         />
       </Head>
-      <BaseStyle />
-      <Component {...pageProps} />
+      <ThemeProvider theme={theme}>
+        <BaseStyle />
+        <Component {...pageProps} />
+      </ThemeProvider>
     </>
   );
 };
