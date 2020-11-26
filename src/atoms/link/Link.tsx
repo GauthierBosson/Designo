@@ -1,9 +1,10 @@
 import * as React from "react";
 import styled, { css } from "styled-components";
 
-type LinkProps = {
+export type LinkProps = {
   icon?: boolean;
   href: string;
+  color?: string;
 };
 
 const StyledLink = styled.a<LinkProps>`
@@ -13,7 +14,14 @@ const StyledLink = styled.a<LinkProps>`
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: ${({ theme }) => theme.colors.primary.black};
+  margin: 1rem 0;
+
+  ${({ color }) =>
+    color
+      ? css`
+          color: ${color};
+        `
+      : null}
 
   span {
     ${({ icon }) =>
@@ -35,8 +43,8 @@ const StyledIcon = styled.span`
   margin-left: 1.5rem;
 `;
 
-const Link: React.FC<LinkProps> = ({ children, icon, href }) => (
-  <StyledLink href={href} icon={icon}>
+const Link: React.FC<LinkProps> = ({ children, icon, href, color }) => (
+  <StyledLink color={color} href={href} icon={icon}>
     {children}
     <StyledIcon />
   </StyledLink>
