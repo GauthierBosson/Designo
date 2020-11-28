@@ -1,6 +1,9 @@
 import "styled-components";
 
 declare module "styled-components" {
+  interface Attributes {
+    css?: CSSProp | CSSObject;
+  }
   export interface DefaultTheme {
     colors: {
       primary: {

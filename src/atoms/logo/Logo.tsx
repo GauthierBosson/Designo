@@ -1,9 +1,9 @@
 import * as React from "react";
 import styled from "styled-components";
 
-export type LogoProps = {
+export interface LogoProps {
   variant?: "black" | "white";
-};
+}
 
 const StyledLogo = styled.img``;
 

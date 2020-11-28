@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 
-import { HeaderTwo } from "../../atoms/typohraphy/Typography";
+import { HeaderTwo, HeaderProps } from "../../atoms/typohraphy/Typography";
 import Link, { LinkProps } from "../../atoms/link/Link";
 import theme from "../../theme";
 
@@ -10,7 +10,8 @@ type CardProps = {
 };
 
 type CategoryCardProps = CardProps &
-  LinkProps & {
+  LinkProps &
+  HeaderProps & {
     title: string;
   };
 

@@ -1,9 +1,9 @@
 import styled, { css } from "styled-components";
 import theme from "../../theme";
 
-export type ButtonProps = {
+export interface ButtonProps {
   design: "primary" | "secondary";
-};
+}
 
 const Button = styled.button<ButtonProps>`
   border-radius: 0.8rem;

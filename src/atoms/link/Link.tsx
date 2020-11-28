@@ -1,11 +1,11 @@
 import * as React from "react";
 import styled, { css } from "styled-components";
 
-export type LinkProps = {
+export interface LinkProps {
   icon?: boolean;
   href: string;
   color?: string;
-};
+}
 
 const StyledLink = styled.a<LinkProps>`
   font-family: inherit;
@@ -21,7 +21,9 @@ const StyledLink = styled.a<LinkProps>`
       ? css`
           color: ${color};
         `
-      : null}
+      : css`
+          color: ${({ theme }) => theme.colors.primary.black};
+        `}
 
   span {
     ${({ icon }) =>

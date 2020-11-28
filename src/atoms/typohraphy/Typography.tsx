@@ -1,7 +1,16 @@
 import styled, { css } from "styled-components";
+import theme from "../../theme";
 
-type TypoProps = {
+export type TypoProps = {
   color?: string;
+};
+
+export type HeaderProps = TypoProps & {
+  title: string;
+};
+
+export type TextProps = TypoProps & {
+  text: string;
 };
 
 const fontFamily = `"Jost"`;
@@ -10,14 +19,19 @@ const fontWeight = 500;
 export const HeaderOne = styled.h1<TypoProps>`
   font-family: ${fontFamily}, sans-serif;
   font-weight: ${fontWeight};
-  font-size: 4.8rem;
-  line-height: 4.8rem;
+  font-size: 3rem;
+  line-height: 3.6rem;
   ${({ color }) =>
     color
       ? css`
           color: ${color};
         `
       : null}
+
+  @media screen and (min-width: ${theme.breakpoints.md}) {
+    font-size: 4.8rem;
+    line-height: 4.8rem;
+  }
 `;
 
 export const HeaderTwo = styled.h2<TypoProps>`
@@ -53,6 +67,7 @@ export const Text = styled.p<TypoProps>`
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 2.6rem;
+  margin: 2rem 0;
   ${({ color }) =>
     color
       ? css`
