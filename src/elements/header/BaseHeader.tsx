@@ -4,7 +4,7 @@ export interface Props {
   bg: string;
 }
 
-const BaseCard = styled.div<Props>`
+const BaseHeader = styled.div<Props>`
   background-color: ${({ theme }) => theme.colors.primary.peach};
   ${({ bg }) =>
     css`
@@ -12,4 +12,4 @@ const BaseCard = styled.div<Props>`
     `};
 `;
 
-export default BaseCard;
+export default BaseHeader;

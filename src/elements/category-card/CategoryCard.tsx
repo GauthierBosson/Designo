@@ -1,8 +1,8 @@
 import * as React from "react";
 import styled from "styled-components";
 
-import { HeaderTwo, HeaderProps } from "../../atoms/typohraphy/Typography";
-import Link, { LinkProps } from "../../atoms/link/Link";
+import { HeaderTwo, HeaderProps } from "../../primitives/typography/Typography";
+import Link, { LinkProps } from "../../primitives/link/Link";
 import theme from "../../theme";
 
 type CardProps = {

@@ -1,19 +1,19 @@
 import * as React from "react";
 import styled from "styled-components";
 
-import BaseCard, { Props } from "./BaseCard";
-import Button from "../../atoms/button/Button";
+import BaseHeader, { Props } from "./BaseHeader";
+import Button from "../../primitives/button/Button";
 import {
   HeaderOne,
   Text,
   HeaderProps,
   TextProps,
-} from "../../atoms/typohraphy/Typography";
+} from "../../primitives/typography/Typography";
 import theme from "../../theme";
 
 interface CardProps extends HeaderProps, TextProps, Props {}
 
-const StyledHomeCard = styled(BaseCard)`
+const StyledHomeCard = styled(BaseHeader)`
   display: flex;
   flex-direction: column;
   background-repeat: no-repeat;
@@ -36,7 +36,7 @@ const StyledHomeCard = styled(BaseCard)`
   }
 `;
 
-export const HomeCard: React.FC<CardProps> = ({ bg, text, title }) => (
+export const HomeHeader: React.FC<CardProps> = ({ bg, text, title }) => (
   <StyledHomeCard bg={bg}>
     <div className="infos">
       <HeaderOne color={theme.colors.primary.white}>{title}</HeaderOne>
