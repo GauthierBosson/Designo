@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import Button from "./Button";
+import { Button } from "../button";
 
 export default {
   title: "Button",
@@ -8,9 +8,9 @@ export default {
 };
 
 export const Primary: React.FC = () => (
-  <Button design="primary">LEARN MORE</Button>
+  <Button variant="primary">LEARN MORE</Button>
 );
 
 export const Secondary: React.FC = () => (
-  <Button design="secondary">LEARN MORE</Button>
+  <Button variant="secondary">LEARN MORE</Button>
 );

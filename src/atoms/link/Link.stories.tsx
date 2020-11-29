@@ -7,10 +7,14 @@ export default {
   component: Link,
 };
 
-export const WithoutIcon: React.FC = () => <Link href="#">VIEW MORE</Link>;
+export const WithoutIcon: React.FC = () => (
+  <Link color="black" href="#">
+    VIEW MORE
+  </Link>
+);
 
 export const WithIcon: React.FC = () => (
-  <Link href="#" icon={true}>
+  <Link color="black" href="#" icon>
     VIEW MORE
   </Link>
 );

@@ -1,24 +1,31 @@
+import * as React from "react";
 import styled, { css } from "styled-components";
 import theme from "../../theme";
 
-export type ButtonProps = {
-  design: "primary" | "secondary";
-};
+export interface IButtonProps
+  extends React.DetailedHTMLProps<
+    React.InputHTMLAttributes<HTMLInputElement>,
+    HTMLInputElement
+  > {
+  variant: "primary" | "secondary";
+  margin?: string;
+  padding?: string;
+}
 
-const Button = styled.button<ButtonProps>`
+const Button = styled.button<IButtonProps>`
   border-radius: 0.8rem;
   padding: 1.3rem 2rem;
   border: none;
   font-family: inherit;
   transition: 0.2s;
 
-  ${({ design, theme }) =>
-    design === "primary"
+  ${({ variant, theme }) =>
+    variant === "primary"
       ? css`
           color: ${theme.colors.secondary.darkGrey};
           background-color: ${theme.colors.primary.white};
         `
-      : design === "secondary"
+      : variant === "secondary"
       ? css`
           color: ${theme.colors.primary.white};
           background-color: ${theme.colors.primary.peach};

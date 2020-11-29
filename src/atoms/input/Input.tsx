@@ -1,8 +1,12 @@
+import * as React from "react";
 import styled from "styled-components";
 
-const Input = styled.input.attrs(({ type }) => ({
-  type: type,
-}))`
+export type IInputProps = React.DetailedHTMLProps<
+  React.InputHTMLAttributes<HTMLInputElement>,
+  HTMLInputElement
+>;
+
+const Input = styled.input<IInputProps>`
   background-color: transparent;
   border: none;
   border-bottom: 1px solid ${({ theme }) => theme.colors.primary.white};
