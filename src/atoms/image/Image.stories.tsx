@@ -8,5 +8,5 @@ export default {
 };
 
 export const Logo: React.FC = () => (
-  <Image src="/assets/shared/desktop/logo-dark.png" width={100} height={100} />
+  <Image src="/assets/shared/desktop/logo-dark.png" width={100} />
 );
