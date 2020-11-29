@@ -12,8 +12,10 @@ const QualityCard: React.FC<{ src: string; title: string; text: string }> = ({
 }) => (
   <Card>
     <Image src={src} alt="" />
-    <HeadingThree>{title}</HeadingThree>
-    <Paragraph>{text}</Paragraph>
+    <div>
+      <HeadingThree>{title}</HeadingThree>
+      <Paragraph>{text}</Paragraph>
+    </div>
   </Card>
 );
 
