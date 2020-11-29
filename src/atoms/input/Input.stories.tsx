@@ -3,7 +3,7 @@ import * as React from "react";
 import Input from "./Input";
 
 export default {
-  title: "Input/form",
+  title: "atoms/Input",
   component: Input,
   parameters: {
     backgrounds: {

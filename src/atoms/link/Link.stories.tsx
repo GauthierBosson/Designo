@@ -3,7 +3,7 @@ import * as React from "react";
 import Link from "./Link";
 
 export default {
-  title: "Link/basic",
+  title: "atoms/Link",
   component: Link,
 };
 

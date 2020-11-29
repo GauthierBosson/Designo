@@ -1,8 +1,8 @@
 import * as React from "react";
-import { HeadingTwo } from "../headings";
+import { HeadingTwo } from ".";
 
 export default {
-  title: "Typography/headings",
+  title: "atoms/Typography/headings",
   component: HeadingTwo,
 };
 

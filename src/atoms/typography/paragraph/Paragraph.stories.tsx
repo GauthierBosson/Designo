@@ -1,8 +1,8 @@
 import * as React from "react";
-import { Paragraph } from "../paragraph";
+import { Paragraph } from ".";
 
 export default {
-  title: "Typography/Paragraph",
+  title: "atoms/Typography/Paragraph",
   component: Text,
 };
 
