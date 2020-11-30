@@ -1,17 +1,24 @@
 import * as React from "react";
 
-export interface IHeadingProps
-  extends React.DetailedHTMLProps<
-    React.HTMLAttributes<HTMLHeadingElement>,
-    HTMLHeadingElement
-  > {
+export interface ITypoProps {
   color?: string;
+  m?: string;
+  mt?: string;
+  mr?: string;
+  ml?: string;
+  mb?: string;
 }
 
+export interface IHeadingProps
+  extends ITypoProps,
+    React.DetailedHTMLProps<
+      React.HTMLAttributes<HTMLHeadingElement>,
+      HTMLHeadingElement
+    > {}
+
 export interface ITextProps
-  extends React.DetailedHTMLProps<
-    React.HTMLAttributes<HTMLParagraphElement>,
-    HTMLParagraphElement
-  > {
-  color?: string;
-}
+  extends ITypoProps,
+    React.DetailedHTMLProps<
+      React.HTMLAttributes<HTMLParagraphElement>,
+      HTMLParagraphElement
+    > {}

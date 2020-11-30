@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { CategoryCard } from ".";
+import CategoryCard from "./CategoryCard";
 
 export default {
   title: "atoms/Card",

@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { CategoryCard as Card } from "../../../atoms/cards-container/CategoryCard";
+import { CategoryCard as Card } from "../../../atoms/cards-wrapper";
 import { HeadingTwo } from "../../../atoms/typography/headings";
 import { Link } from "../../../atoms/link";
 

@@ -6,6 +6,7 @@ export interface ILinkProps
     React.LinkHTMLAttributes<HTMLLinkElement>,
     HTMLLinkElement
   > {
+  underline?: boolean;
   icon?: boolean;
   color?: "white" | "black";
 }
@@ -45,6 +46,16 @@ const Link = styled.a<ILinkProps>`
           }
         `
       : null}
+
+  &:hover {
+    ${({ underline }) =>
+      underline
+        ? css`
+            text-decoration: underline;
+            text-underline-position: under;
+          `
+        : null}
+  }
 `;
 
 export default Link;

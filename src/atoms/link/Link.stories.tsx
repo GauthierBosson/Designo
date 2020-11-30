@@ -1,5 +1,6 @@
 import * as React from "react";
 
+import NextLink from "next/link";
 import Link from "./Link";
 
 export default {
@@ -7,14 +8,16 @@ export default {
   component: Link,
 };
 
-export const WithoutIcon: React.FC = () => (
-  <Link color="black" href="#">
-    VIEW MORE
-  </Link>
+export const WithoutIconAndUnderline: React.FC = () => (
+  <NextLink href="/" passHref prefetch={false}>
+    <Link color="black">VIEW MORE</Link>
+  </NextLink>
 );
 
-export const WithIcon: React.FC = () => (
-  <Link color="black" href="#" icon>
-    VIEW MORE
-  </Link>
+export const WithIconAndUnderline: React.FC = () => (
+  <NextLink href="/" passHref prefetch={false}>
+    <Link color="black" icon underline>
+      VIEW MORE
+    </Link>
+  </NextLink>
 );

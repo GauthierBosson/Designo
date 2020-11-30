@@ -17,6 +17,7 @@ const Button = styled.button<IButtonProps>`
   padding: 1.3rem 2rem;
   border: none;
   font-family: inherit;
+  cursor: pointer;
   transition: 0.2s;
 
   ${({ variant, theme }) =>
