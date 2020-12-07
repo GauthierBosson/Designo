@@ -44,6 +44,11 @@ export const HeadingTwo = styled.h2<IHeadingProps>`
           color: ${color};
         `
       : null}
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+    font-size: 4rem;
+    line-height: 4.8rem;
+  }
 `;
 
 export default HeadingTwo;

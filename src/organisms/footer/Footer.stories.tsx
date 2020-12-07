@@ -7,4 +7,6 @@ export default {
   component: Footer,
 };
 
-export const FooterComponent: React.FC = () => <Footer />;
+export const WithoutCard: React.FC = () => <Footer />;
+
+export const WithCard: React.FC = () => <Footer hasCard />;

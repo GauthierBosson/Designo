@@ -9,4 +9,5 @@ export interface ICardProps
    * for testing purpose, adds border
    */
   test?: boolean;
+  bg?: string;
 }

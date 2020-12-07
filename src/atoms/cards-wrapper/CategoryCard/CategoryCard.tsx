@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import styled, { css } from "styled-components";
 
 import { ICardProps } from "../type";
@@ -23,7 +24,7 @@ const CategoryCard = styled.div<ICategoryCardProps>`
   padding: 7rem 2rem;
   background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.4)), 
     url("${({ bg }) => bg}") no-repeat center center;
-  background-size: 100%;
+  background-size: cover;
   cursor: pointer;
   transition: 0.2s;
 
@@ -31,7 +32,37 @@ const CategoryCard = styled.div<ICategoryCardProps>`
     background: linear-gradient(${({ theme }) =>
       theme.colors.primary.peach}, hsla(11, 73%, 66%, 0.4)),
       url("${({ bg }) => bg}") no-repeat center center;
-    background-size: 100%;
+    background-size: cover;
+  }
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.4)), 
+      url("${({ bg }) =>
+        bg.replace("mobile", "tablet")}") no-repeat center center;
+    background-size: cover;
+
+    &:hover {
+      background: linear-gradient(${({ theme }) =>
+        theme.colors.primary.peach}, hsla(11, 73%, 66%, 0.4)),
+        url("${({ bg }) =>
+          bg.replace("mobile", "tablet")}") no-repeat center center;
+      background-size: cover;
+    }
+  }
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.4)), 
+      url("${({ bg }) =>
+        bg.replace("mobile", "desktop")}") no-repeat center center;
+    background-size: cover;
+
+    &:hover {
+      background: linear-gradient(${({ theme }) =>
+        theme.colors.primary.peach}, hsla(11, 73%, 66%, 0.4)),
+        url("${({ bg }) =>
+          bg.replace("mobile", "desktop")}") no-repeat center center;
+      background-size: cover;
+    }
   }
 `;
 

@@ -43,6 +43,11 @@ const HeadingOne = styled.h1<IHeadingProps>`
           color: ${color};
         `
       : null}
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+    font-size: 4.8rem;
+    line-height: 4.8rem;
+  }
 `;
 
 export default HeadingOne;

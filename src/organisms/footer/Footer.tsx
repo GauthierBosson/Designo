@@ -4,15 +4,18 @@ import styled from "styled-components";
 import { Image } from "../../atoms/image";
 import { Link } from "../../atoms/link";
 import { TextBlock } from "../../molecules/text-block";
+import { FooterCard } from "../../molecules/cards/FooterCard";
 
 const FooterWrapper = styled.footer`
-  padding: 3rem;
+  padding: 25rem 3rem 3rem 3rem;
+  margin-top: 35rem;
   background-color: ${({ theme }) => theme.colors.primary.black};
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  position: relative;
 
   .footer {
     &__links {
@@ -36,7 +39,7 @@ const FooterWrapper = styled.footer`
     &__logo {
       width: 100%;
       padding-bottom: 3rem;
-      border-bottom: 1px solid white;
+      border-bottom: 1px solid rgba(250, 250, 250, 0.2);
     }
 
     &__contact {
@@ -49,8 +52,9 @@ const FooterWrapper = styled.footer`
   }
 `;
 
-const Footer: React.FC = () => (
+const Footer: React.FC<{ hasCard?: boolean }> = ({ hasCard }) => (
   <FooterWrapper>
+    {hasCard && <FooterCard />}
     <div className="footer__links">
       <div className="footer__logo">
         <Image src="/assets/shared/desktop/logo-light.png" width={150} />
@@ -76,6 +80,7 @@ const Footer: React.FC = () => (
           "M : contact@designo.co",
         ]}
       />
+      <div className="footer__sc"></div>
     </div>
   </FooterWrapper>
 );
