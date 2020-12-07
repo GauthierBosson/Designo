@@ -7,6 +7,7 @@ const CategoryGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   gap: 3rem;
+  padding: 10rem 3rem 0 3rem;
 `;
 
 const Categories: React.FC = () => (
