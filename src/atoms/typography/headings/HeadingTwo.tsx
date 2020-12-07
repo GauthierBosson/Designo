@@ -5,8 +5,8 @@ import { IHeadingProps } from "../types";
 export const HeadingTwo = styled.h2<IHeadingProps>`
   font-family: "Jost", sans-serif;
   font-weight: 500;
-  font-size: 2.5rem;
-  line-height: 4.8rem;
+  font-size: 3rem;
+  line-height: 3.5rem;
   letter-spacing: 0.2rem;
   ${({ m }) =>
     m
