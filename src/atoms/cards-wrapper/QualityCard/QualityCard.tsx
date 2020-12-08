@@ -9,25 +9,47 @@ const QualityCard = styled.div<ICardProps>`
   justify-content: center;
   text-align: center;
 
+  h3 {
+    margin: 2rem 0;
+  }
+
   .qualitycard__img {
-    ${({ bg }) =>
-      bg
-        ? css`
+    position: relative;
+
+    ::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      z-index: -1;
+      ${({ rotation }) =>
+        rotation
+          ? css`
+              transform: rotate(${rotation}deg);
+            `
+          : null};
+      ${({ bg }) =>
+        bg
+          ? css`
             background-image: url("${bg}");
             background-repeat: no-repeat;
             background-position: center center;
+            background-size: contain;
           `
-        : null}
+          : null}
+    }
   }
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
     flex-direction: row;
 
-    img {
-      margin-right: 3rem;
+    .qualitycard__img {
+      flex-basis: 90%;
     }
 
-    div {
+    .qualitycard__text {
       display: flex;
       flex-direction: column;
       text-align: left;

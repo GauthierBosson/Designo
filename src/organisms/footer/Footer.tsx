@@ -45,10 +45,60 @@ const FooterWrapper = styled.footer`
     &__contact {
       padding: 3rem 0;
     }
+
+    &__sc {
+      img:not(:last-child) {
+        margin-right: 2rem;
+      }
+    }
   }
 
   p:nth-child(3) {
     margin-bottom: 3rem;
+  }
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+    padding: 15rem 3rem 3rem 3rem;
+    .footer {
+      &__links {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+        padding-bottom: 3rem;
+        border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+
+        &--block {
+          a:not(:last-child) {
+            margin-right: 3rem;
+          }
+        }
+      }
+
+      &__logo {
+        width: auto;
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+
+      &__contact {
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        div:nth-child(2) {
+          margin-right: 13%;
+        }
+      }
+    }
+
+    p:nth-child(3) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    padding: 15rem 10% 3rem 10%;
   }
 `;
 
@@ -80,7 +130,13 @@ const Footer: React.FC<{ hasCard?: boolean }> = ({ hasCard }) => (
           "M : contact@designo.co",
         ]}
       />
-      <div className="footer__sc"></div>
+      <div className="footer__sc">
+        <img src="/assets/shared/desktop/icon-facebook.svg" alt="facebook" />
+        <img src="/assets/shared/desktop/icon-youtube.svg" alt="youtube" />
+        <img src="/assets/shared/desktop/icon-twitter.svg" alt="twitter" />
+        <img src="/assets/shared/desktop/icon-pinterest.svg" alt="pinterest" />
+        <img src="/assets/shared/desktop/icon-instagram.svg" alt="instagram" />
+      </div>
     </div>
   </FooterWrapper>
 );

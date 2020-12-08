@@ -10,4 +10,5 @@ export interface ICardProps
    */
   test?: boolean;
   bg?: string;
+  rotation?: number;
 }

@@ -10,12 +10,13 @@ const QualityCard: React.FC<{
   title: string;
   text: string;
   bg?: string;
-}> = ({ src, title, text, bg }) => (
-  <Card bg={bg}>
+  rotation?: number;
+}> = ({ src, title, text, bg, rotation }) => (
+  <Card rotation={rotation} bg={bg}>
     <div className="qualitycard__img">
       <Image src={src} alt="" />
     </div>
-    <div>
+    <div className="qualitycard__text">
       <HeadingThree>{title}</HeadingThree>
       <Paragraph>{text}</Paragraph>
     </div>

@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import { CategoryCard } from "../../../molecules/cards/CategoryCard";
 
-const CategoryGrid = styled.div`
+const CategoriesGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   gap: 3rem;
@@ -11,29 +11,13 @@ const CategoryGrid = styled.div`
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 30rem);
     padding: 10rem 0 0 0;
     margin: 0 10%;
-
-    & > div:first-child {
-      grid-column: 1/2;
-      grid-row: 1/3;
-    }
-
-    & > div:nth-child(2) {
-      grid-column: 2/3;
-      grid-row: 1/2;
-    }
-
-    & > div:last-child {
-      grid-column: 2/3;
-      grid-row: 2/3;
-    }
   }
 `;
 
 const Categories: React.FC = () => (
-  <CategoryGrid>
+  <CategoriesGrid>
     <CategoryCard
       bg="/assets/home/mobile/image-web-design.jpg"
       title="WEB DESIGN"
@@ -41,18 +25,12 @@ const Categories: React.FC = () => (
       href="/web-design"
     />
     <CategoryCard
-      bg="/assets/home/mobile/image-app-design.jpg"
-      title="APP DESIGN"
-      linkTxt="VIEW PROJECTS"
-      href="/app-design"
-    />
-    <CategoryCard
       bg="/assets/home/mobile/image-graphic-design.jpg"
       title="GRAPHIC DESIGN"
       linkTxt="VIEW PROJECTS"
       href="/graphic-design"
     />
-  </CategoryGrid>
+  </CategoriesGrid>
 );
 
 export default Categories;
