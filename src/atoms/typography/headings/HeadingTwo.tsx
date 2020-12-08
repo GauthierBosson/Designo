@@ -5,8 +5,8 @@ import { IHeadingProps } from "../types";
 export const HeadingTwo = styled.h2<IHeadingProps>`
   font-family: "Jost", sans-serif;
   font-weight: 500;
-  font-size: 4rem;
-  line-height: 4.8rem;
+  font-size: 3rem;
+  line-height: 3.5rem;
   letter-spacing: 0.2rem;
   ${({ m }) =>
     m
@@ -44,6 +44,11 @@ export const HeadingTwo = styled.h2<IHeadingProps>`
           color: ${color};
         `
       : null}
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+    font-size: 4rem;
+    line-height: 4.8rem;
+  }
 `;
 
 export default HeadingTwo;

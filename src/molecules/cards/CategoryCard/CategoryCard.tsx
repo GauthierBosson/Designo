@@ -8,10 +8,11 @@ const CategoryCard: React.FC<{
   bg: string;
   title: string;
   linkTxt: string;
-}> = ({ bg, title, linkTxt }) => (
+  href: string;
+}> = ({ bg, title, linkTxt, href }) => (
   <Card bg={bg}>
     <HeadingTwo color="white">{title}</HeadingTwo>
-    <Link href="#" icon>
+    <Link href={href} icon>
       {linkTxt}
     </Link>
   </Card>
