@@ -7,6 +7,8 @@ import theme from "../theme";
 import BaseStyle from "../layouts/base-style/BaseStyle";
 import { Navbar } from "../organisms/navbar";
 
+import "leaflet/dist/leaflet.css";
+
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }: AppProps) => {
   return (
     <>

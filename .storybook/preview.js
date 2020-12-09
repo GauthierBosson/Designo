@@ -4,6 +4,8 @@ import { ThemeProvider } from "styled-components";
 import theme from "../src/theme.ts";
 import BaseStyle from "../src/layouts/base-style/BaseStyle";
 
+import "leaflet/dist/leaflet.css";
+
 const customViewports = {
   sm: {
     name: "small",
