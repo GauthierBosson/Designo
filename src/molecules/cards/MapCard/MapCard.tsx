@@ -3,14 +3,12 @@ import styled from "styled-components";
 import { MapContainer, TileLayer } from "react-leaflet";
 
 const MapWrapper = styled.div`
-  width: 500px;
-  height: 500px;
-  border-radius: ${({ theme }) => theme.borderRadius.base};
+  width: inherit;
+  min-height: 30rem;
 
   .leaflet-container {
-    border-radius: ${({ theme }) => theme.borderRadius.base};
-    width: 100%;
-    height: 100%;
+    width: inherit;
+    min-height: inherit;
   }
 `;
 
