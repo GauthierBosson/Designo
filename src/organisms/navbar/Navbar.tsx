@@ -8,7 +8,7 @@ const Navbar: React.FC = () => (
   <Wrapper>
     <Image src="/assets/shared/desktop/logo-dark.png" width={150} />
     <div className="navbar__links">
-      <Link color="black" underline href="#">
+      <Link color="black" underline href="/about-us">
         OUR COMPANY
       </Link>
       <Link color="black" underline href="#">

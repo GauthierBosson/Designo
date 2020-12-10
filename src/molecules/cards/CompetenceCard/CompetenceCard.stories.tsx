@@ -9,7 +9,7 @@ export default {
 
 export const WorldClass: React.FC = () => (
   <CompetenceCard
-    flex="row-reverse"
+    flex="row"
     bg="/assets/about/mobile/image-world-class-talent.jpg"
     title="World-class talent"
     texts={[

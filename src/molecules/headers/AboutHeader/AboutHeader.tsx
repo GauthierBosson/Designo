@@ -13,22 +13,28 @@ const AboutWrapper = styled.div`
   }
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+    margin: 3rem 3rem 10rem 3rem;
     .aboutheader__img {
       background-image: url("/assets/about/tablet/image-about-hero.jpg");
       background-repeat: no-repeat;
       background-size: cover;
+      border-top-left-radius: ${({ theme }) => theme.borderRadius.base};
+      border-top-right-radius: ${({ theme }) => theme.borderRadius.base};
     }
 
     .aboutheader__content {
       div {
         margin: 0;
         border-radius: 0;
+        border-bottom-left-radius: ${({ theme }) => theme.borderRadius.base};
+        border-bottom-right-radius: ${({ theme }) => theme.borderRadius.base};
       }
     }
   }
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
     flex-direction: row-reverse;
+    margin: 3rem 10% 10rem 10%;
 
     .aboutheader__img {
       flex-basis: 45%;
@@ -36,6 +42,7 @@ const AboutWrapper = styled.div`
       border-bottom-right-radius: ${({ theme }) => theme.borderRadius.base};
       background-image: url("/assets/about/desktop/image-about-hero.jpg");
       background-position: center center;
+      border-top-left-radius: 0;
     }
 
     .aboutheader__content {
@@ -43,6 +50,8 @@ const AboutWrapper = styled.div`
       div {
         text-align: left;
         padding: 10rem 7rem;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: ${({ theme }) => theme.borderRadius.base};
       }
     }
   }
