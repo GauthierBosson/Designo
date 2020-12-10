@@ -12,10 +12,7 @@ const NavbarWrapper = styled.nav`
     display: none;
   }
 
-  @media screen and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-    padding-top: 3rem;
-    height: 100px;
-
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
     img:last-child {
       display: none;
     }
@@ -27,6 +24,11 @@ const NavbarWrapper = styled.nav`
         margin-right: 5rem;
       }
     }
+  }
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+    padding-top: 3rem;
+    height: 100px;
   }
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
