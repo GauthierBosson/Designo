@@ -1,12 +1,11 @@
-import * as React from "react";
 import styled from "styled-components";
 
-export type IInputProps = React.DetailedHTMLProps<
-  React.InputHTMLAttributes<HTMLInputElement>,
-  HTMLInputElement
+type ITextArea = React.DetailedHTMLFactory<
+  React.TextareaHTMLAttributes<HTMLTextAreaElement>,
+  HTMLTextAreaElement
 >;
 
-const Input = styled.input<IInputProps>`
+const TextArea = styled.textarea<ITextArea>`
   background-color: transparent;
   border: none;
   border-bottom: 1px solid ${({ theme }) => theme.colors.primary.white};
@@ -30,4 +29,4 @@ const Input = styled.input<IInputProps>`
   }
 `;
 
-export default Input;
+export default TextArea;
