@@ -7,10 +7,12 @@ type ITextArea = React.DetailedHTMLFactory<
 
 const TextArea = styled.textarea<ITextArea>`
   background-color: transparent;
+  color: ${({ theme }) => theme.colors.primary.white};
   border: none;
   border-bottom: 1px solid ${({ theme }) => theme.colors.primary.white};
   padding: 1.5rem;
   transition: 0.2s;
+  resize: none;
 
   &:focus {
     outline: none;

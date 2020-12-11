@@ -9,6 +9,7 @@ export type IInputProps = React.DetailedHTMLProps<
 const Input = styled.input<IInputProps>`
   background-color: transparent;
   border: none;
+  color: ${({ theme }) => theme.colors.primary.white};
   border-bottom: 1px solid ${({ theme }) => theme.colors.primary.white};
   padding: 1.5rem;
   transition: 0.2s;

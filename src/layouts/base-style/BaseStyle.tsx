@@ -11,7 +11,8 @@ const BaseStyle = createGlobalStyle`
     box-sizing: inherit;
   }
 
-  body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  body, h1, h2, h3, h4, h5, h6, p, ol, ul, input, textarea {
+    font-family: inherit;
     margin: 0;
     padding: 0;
     font-weight: normal;
