@@ -13,7 +13,7 @@ const Contact: React.FC = () => (
       />
       <Locations />
     </main>
-    <Footer />
+    <Footer hasCard={false} />
   </>
 );
 
