@@ -14,7 +14,7 @@ const Navbar: React.FC = () => (
       <Link color="black" underline href="/locations">
         LOCATIONS
       </Link>
-      <Link color="black" underline href="#">
+      <Link color="black" underline href="/contact">
         CONTACT
       </Link>
     </div>
