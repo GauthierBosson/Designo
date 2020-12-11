@@ -28,8 +28,8 @@ const AboutUs: React.FC = () => (
           "We are visual storytellers in appealing and captivating ways. By combining business and marketing strategies, we inspire audiences to take action and drive real results",
         ]}
       />
-      <Footer hasCard />
     </main>
+    <Footer hasCard />
   </>
 );
 
