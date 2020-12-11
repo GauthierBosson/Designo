@@ -13,8 +13,8 @@ const GraphicDesign: React.FC = () => (
       />
       <Projects />
       <Categories />
-      <Footer hasCard />
     </main>
+    <Footer hasCard />
   </>
 );
 

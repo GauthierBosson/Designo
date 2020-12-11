@@ -9,6 +9,7 @@ export default {
 
 export const CanadaMap: React.FC = () => (
   <Map
+    flex="row"
     position={[43.644001, -79.394561]}
     title="Canada"
     firstBlock={[
