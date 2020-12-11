@@ -108,7 +108,7 @@ const FooterWrapper = styled.footer<{ hasCard: boolean }>`
 `;
 
 const Footer: React.FC<{ hasCard?: boolean }> = ({ hasCard }) => (
-  <FooterWrapper>
+  <FooterWrapper hasCard={hasCard}>
     {hasCard && <FooterCard />}
     <div className="footer__links">
       <div className="footer__logo">
