@@ -1,5 +1,5 @@
 import * as React from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import dynamic from "next/dynamic";
 
 import { MapContentCard } from "../../molecules/cards/MapContentCard";

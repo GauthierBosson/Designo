@@ -24,6 +24,23 @@ const Wrapper = styled.div`
   }
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    h2 {
+      flex-basis: 100%;
+      text-align: left;
+      align-self: center;
+    }
+
+    div {
+      flex-basis: 50% !important;
+      align-items: flex-start;
+    }
+
+    p {
+      text-align: left;
+    }
   }
 `;
 
