@@ -1,14 +1,19 @@
 import * as React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import { Image } from "../../atoms/image";
 import { Link } from "../../atoms/link";
 import { TextBlock } from "../../molecules/text-block";
 import { FooterCard } from "../../molecules/cards/FooterCard";
 
-const FooterWrapper = styled.footer`
-  padding: 25rem 3rem 3rem 3rem;
-  margin-top: 35rem;
+const FooterWrapper = styled.footer<{ hasCard: boolean }>`
+  padding: ${({ hasCard }) => (hasCard ? 25 : 6)}rem 3rem 3rem 3rem;
+  ${({ hasCard }) =>
+    hasCard
+      ? css`
+          margin-top: 35rem;
+        `
+      : null}
   background-color: ${({ theme }) => theme.colors.primary.black};
   display: flex;
   flex-direction: column;
