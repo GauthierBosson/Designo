@@ -52,6 +52,15 @@ const Wrapper = styled.div`
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
     flex-direction: row;
     gap: 5rem;
+    margin: 3rem 10%;
+  }
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.xl}) {
+    margin: 3rem 20%;
+  }
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+    margin: 3rem 25%;
   }
 `;
 
