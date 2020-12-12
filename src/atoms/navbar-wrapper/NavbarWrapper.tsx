@@ -32,7 +32,9 @@ const NavbarWrapper = styled.nav`
   }
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-    padding: 3rem 10% 0 10%;
+    padding: 3rem 3rem 0 3rem;
+    max-width: ${({ theme }) => theme.content.maxWidth};
+    margin: 0 auto;
   }
 `;
 

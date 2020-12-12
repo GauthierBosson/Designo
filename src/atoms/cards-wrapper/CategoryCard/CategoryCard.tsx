@@ -16,53 +16,49 @@ const CategoryCard = styled.div<ICategoryCardProps>`
       : null}
 
   display: flex;
+  min-height: 30rem;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  position: relative;
   border-radius: ${({ theme }) => theme.borderRadius.base};
   padding: 7rem 2rem;
-  background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.4)), 
-    url("${({ bg }) => bg}") no-repeat center center;
+  background: url("${({ bg }) => bg}") no-repeat center center;
   background-size: cover;
   cursor: pointer;
   transition: 0.2s;
 
-  &:hover {
-    background: linear-gradient(${({ theme }) =>
-      theme.colors.primary.peach}, hsla(11, 73%, 66%, 0.4)),
-      url("${({ bg }) => bg}") no-repeat center center;
-    background-size: cover;
+  div {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: inherit;
+    flex-direction: inherit;
+    align-items: inherit;
+    justify-content: inherit;
+    padding: inherit;
+    background-color: hsla(270, 3%, 11%, 0.4);
+    border-radius: ${({ theme }) => theme.borderRadius.base};
+    transition: 0.2s;
+
+    &:hover {
+      background-color: hsla(11, 73%, 66%, 0.6);
+    }
   }
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.4)), 
-      url("${({ bg }) =>
-        bg.replace("mobile", "tablet")}") no-repeat center center;
+    background: url("${({ bg }) =>
+      bg.replace("mobile", "tablet")}") no-repeat center center;
     background-size: cover;
-
-    &:hover {
-      background: linear-gradient(${({ theme }) =>
-        theme.colors.primary.peach}, hsla(11, 73%, 66%, 0.4)),
-        url("${({ bg }) =>
-          bg.replace("mobile", "tablet")}") no-repeat center center;
-      background-size: cover;
-    }
   }
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.4)), 
-      url("${({ bg }) =>
-        bg.replace("mobile", "desktop")}") no-repeat center center;
+    background: url("${({ bg }) =>
+      bg.replace("mobile", "desktop")}") no-repeat center center;
     background-size: cover;
-
-    &:hover {
-      background: linear-gradient(${({ theme }) =>
-        theme.colors.primary.peach}, hsla(11, 73%, 66%, 0.4)),
-        url("${({ bg }) =>
-          bg.replace("mobile", "desktop")}") no-repeat center center;
-      background-size: cover;
-    }
   }
 `;
 

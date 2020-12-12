@@ -4,10 +4,11 @@ import { AboutHeader } from "../molecules/headers";
 import { CompetenceCard } from "../molecules/cards/CompetenceCard";
 import { Footer } from "../organisms/footer";
 import { Locations } from "../layouts/about-us";
+import { Main } from "../layouts/main";
 
 const AboutUs: React.FC = () => (
   <>
-    <main>
+    <Main>
       <AboutHeader />
       <CompetenceCard
         flex="row"
@@ -28,7 +29,7 @@ const AboutUs: React.FC = () => (
           "We are visual storytellers in appealing and captivating ways. By combining business and marketing strategies, we inspire audiences to take action and drive real results",
         ]}
       />
-    </main>
+    </Main>
     <Footer hasCard />
   </>
 );

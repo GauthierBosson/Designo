@@ -24,5 +24,8 @@ declare module "styled-components" {
     borderRadius: {
       base: string;
     };
+    content: {
+      maxWidth: string;
+    };
   }
 }

@@ -13,7 +13,6 @@ const CategoryGrid = styled.div`
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 30rem);
     padding: 10rem 0 0 0;
-    margin: 0 10%;
 
     & > div:first-child {
       grid-column: 1/2;

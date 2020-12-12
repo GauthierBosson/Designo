@@ -2,12 +2,13 @@ import * as React from "react";
 
 import { Maps } from "../layouts/locations";
 import { Footer } from "../organisms/footer";
+import { Main } from "../layouts/main";
 
 const Locations: React.FC = () => (
   <>
-    <main>
+    <Main>
       <Maps />
-    </main>
+    </Main>
     <Footer hasCard />
   </>
 );

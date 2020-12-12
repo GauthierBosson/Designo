@@ -12,7 +12,6 @@ const CategoriesGrid = styled.div`
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
     grid-template-columns: repeat(2, 1fr);
     padding: 10rem 0 0 0;
-    margin: 0 10%;
   }
 `;
 

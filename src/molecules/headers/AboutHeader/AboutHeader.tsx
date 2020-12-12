@@ -34,7 +34,7 @@ const AboutWrapper = styled.div`
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
     flex-direction: row-reverse;
-    margin: 3rem 10% 10rem 10%;
+    margin: 3rem 0 10rem 0;
 
     .aboutheader__img {
       flex-basis: 45%;
@@ -52,6 +52,10 @@ const AboutWrapper = styled.div`
         padding: 10rem 7rem;
         border-bottom-right-radius: 0;
         border-top-left-radius: ${({ theme }) => theme.borderRadius.base};
+      }
+
+      p {
+        max-width: 100%;
       }
     }
   }

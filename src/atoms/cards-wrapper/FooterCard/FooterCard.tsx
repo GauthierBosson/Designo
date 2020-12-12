@@ -23,6 +23,7 @@ const FooterCard = styled.div`
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
     width: 80%;
+    max-width: 1200px;
     flex-direction: row;
     justify-content: space-between;
     text-align: left;

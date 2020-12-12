@@ -11,7 +11,6 @@ const QualitiesGrid = styled.div`
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
     grid-template-columns: repeat(3, 1fr);
-    margin: 0 10%;
     padding: 10rem 0 0 0;
   }
 `;

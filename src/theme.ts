@@ -23,6 +23,9 @@ const theme: DefaultTheme = {
   borderRadius: {
     base: "1.5rem",
   },
+  content: {
+    maxWidth: "1230px",
+  },
 };
 
 export default theme;

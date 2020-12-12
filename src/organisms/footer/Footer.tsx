@@ -104,6 +104,12 @@ const FooterWrapper = styled.footer<{ hasCard: boolean }>`
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
     padding: 15rem 10% 3rem 10%;
+
+    .footer__links,
+    .footer__contact {
+      max-width: ${({ theme }) => theme.content.maxWidth};
+      margin: 0 auto;
+    }
   }
 `;
 
@@ -115,9 +121,9 @@ const Footer: React.FC<{ hasCard?: boolean }> = ({ hasCard }) => (
         <Image src="/assets/shared/desktop/logo-light.png" width={150} />
       </div>
       <div className="footer__links--block">
-        <Link href="#">OUR COMPANY</Link>
-        <Link href="#">LOCATIONS</Link>
-        <Link href="#">CONTACT</Link>
+        <Link href="/about-us">OUR COMPANY</Link>
+        <Link href="/locations">LOCATIONS</Link>
+        <Link href="/contact">CONTACT</Link>
       </div>
     </div>
     <div className="footer__contact">

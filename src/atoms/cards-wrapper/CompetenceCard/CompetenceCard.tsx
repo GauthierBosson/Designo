@@ -46,7 +46,6 @@ const CompetenceCard = styled.div<ICompetenceCard>`
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
     padding: 0;
-    margin: 0 10%;
     display: flex;
     flex-direction: ${({ flex }) => flex};
 

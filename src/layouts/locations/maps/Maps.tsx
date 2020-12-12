@@ -16,7 +16,7 @@ const MapsGrid = styled.div`
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
     gap: 3rem;
     padding: 0;
-    margin: 3rem 10% 0 10%;
+    margin: 3rem 0 0 0;
   }
 `;
 
